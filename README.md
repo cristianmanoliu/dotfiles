@@ -12,7 +12,7 @@ https://github.com/LazyVim/starter
 
 ## tmux
 
-TBD
+https://github.com/samoshkin/tmux-config
 
 ## tmuxp
 
