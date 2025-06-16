@@ -1,6 +1,9 @@
 # Dotfiles
 
-neovim
 zk
+
+neovim
+
 tmux
+
 tmuxp
