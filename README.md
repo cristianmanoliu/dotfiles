@@ -4,7 +4,7 @@
 
 https://github.com/shivan-s/dotfiles/tree/main
 
-neovim
+# nvim
 
 tmux
 
