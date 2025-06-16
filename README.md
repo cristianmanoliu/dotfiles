@@ -16,4 +16,4 @@ https://github.com/samoshkin/tmux-config
 
 ## tmuxp
 
-TBD
+https://github.com/tmux-python/tmuxp
