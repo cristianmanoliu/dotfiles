@@ -4,8 +4,16 @@
 
 https://github.com/shivan-s/dotfiles/tree/main
 
-# nvim
+## nvim
 
-tmux
+https://github.com/LazyVim/LazyVim
 
-tmuxp
+https://github.com/LazyVim/starter
+
+## tmux
+
+TBD
+
+## tmuxp
+
+TBD
