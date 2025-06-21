@@ -14,6 +14,8 @@ https://github.com/LazyVim/starter
 
 https://github.com/samoshkin/tmux-config
 
+Mac: https://github.com/samoshkin/tmux-config/issues/49
+
 ## tmuxp
 
 https://github.com/tmux-python/tmuxp
