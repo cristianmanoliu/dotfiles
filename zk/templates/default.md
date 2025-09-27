@@ -4,4 +4,4 @@ date: {{ format-date now 'long' }}
 tags: []
 ---
 
-## {{ title }}
+# {{ title }}
