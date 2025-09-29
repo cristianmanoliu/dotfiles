@@ -25,6 +25,8 @@ local function run_file()
     cmd = string.format("python3 %s%s", filename, args_part)
   elseif ext == "sh" then
     cmd = string.format("bash %s%s", filename, args_part)
+  elseif ext == "js" then
+    cmd = string.format("node %s%s", filename, args_part)
   elseif ext == "c" then
     cmd = string.format("gcc %s -o %s && ./%s%s", filename, basename, basename, args_part)
   else
