@@ -1,17 +1,58 @@
 return {
+  -- 1. Catppuccin
   {
     "catppuccin/nvim",
     name = "catppuccin",
     lazy = false,
     priority = 1000,
     opts = {
-      flavour = "mocha", -- or your choice
-      custom_highlights = function(colors)
-        return {
-          Comment = { fg = colors.green, italic = true },
-        }
-      end,
+      flavour = "mocha", -- latte, frappe, macchiato, mocha
+      transparent_background = false,
+      show_end_of_buffer = false,
+      styles = {
+        comments = { "italic" },
+        conditionals = { "italic" },
+      },
     },
   },
-  { "LazyVim/LazyVim", opts = { colorscheme = "catppuccin" } },
+
+  -- 2. Tokyo Night
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      style = "night", -- storm, moon, night, day
+      transparent = false,
+      terminal_colors = true,
+      styles = {
+        comments = { italic = true },
+        keywords = { italic = true },
+      },
+    },
+  },
+
+  -- 3. Kanagawa
+  {
+    "rebelot/kanagawa.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      theme = "wave", -- wave, dragon, lotus
+      transparent = false,
+      terminal_colors = true,
+      styles = {
+        comment = { italic = true },
+        keyword = { italic = true },
+      },
+    },
+  },
+
+  -- Choose your colorscheme
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin", -- or "tokyonight" or "kanagawa"
+    },
+  },
 }

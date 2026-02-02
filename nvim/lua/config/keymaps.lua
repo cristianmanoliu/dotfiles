@@ -11,6 +11,8 @@ end
 
 -- Main runner: chooses command by extension and appends args only if present
 local function run_file()
+  vim.cmd.write() -- Save current buffer first
+
   local ext = vim.fn.expand("%:e")
   local filename = vim.fn.expand("%:t")
   local basename = vim.fn.expand("%:t:r")
@@ -27,6 +29,8 @@ local function run_file()
     cmd = string.format("bash %s%s", filename, args_part)
   elseif ext == "js" then
     cmd = string.format("node %s%s", filename, args_part)
+  elseif ext == "go" then
+    cmd = string.format("go run %s%s", filename, args_part)
   elseif ext == "c" then
     cmd = string.format("gcc %s -o %s && ./%s%s", filename, basename, basename, args_part)
   else
