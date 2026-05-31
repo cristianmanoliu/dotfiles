@@ -89,5 +89,12 @@ wezterm.on("gui-startup", function(cmd)
 	window:gui_window():maximize()
 end)
 
+-- smart-splits: seamless C-hjkl nav across wezterm panes <-> nvim splits (M-hjkl resize)
+local smart_splits = wezterm.plugin.require("https://github.com/mrjones2014/smart-splits.nvim")
+smart_splits.apply_to_config(config, {
+	direction_keys = { "h", "j", "k", "l" },
+	modifiers = { move = "CTRL", resize = "META" },
+})
+
 -- and finally, return the configuration to wezterm
 return config
