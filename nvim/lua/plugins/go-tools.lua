@@ -7,7 +7,6 @@ return {
     config = function()
       require("go").setup()
     end,
-    event = { "CmdlineEnter" },
     ft = { "go", "gomod" },
   },
 }

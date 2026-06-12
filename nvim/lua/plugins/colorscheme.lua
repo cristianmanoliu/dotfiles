@@ -16,11 +16,10 @@ return {
     },
   },
 
-  -- 2. Tokyo Night
+  -- 2. Tokyo Night (not active — lazy-loaded, only fetched on :colorscheme)
   {
     "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
+    lazy = true,
     opts = {
       style = "night", -- storm, moon, night, day
       transparent = false,
@@ -32,11 +31,10 @@ return {
     },
   },
 
-  -- 3. Kanagawa
+  -- 3. Kanagawa (not active — lazy-loaded, only fetched on :colorscheme)
   {
     "rebelot/kanagawa.nvim",
-    lazy = false,
-    priority = 1000,
+    lazy = true,
     opts = {
       theme = "wave", -- wave, dragon, lotus
       transparent = false,
