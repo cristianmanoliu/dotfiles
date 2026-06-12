@@ -6,7 +6,6 @@ set -g focus-events on
 set -g renumber-windows on
 set -g default-terminal "tmux-256color"
 set -as terminal-features ",xterm-256color:RGB"   # 24-bit truecolor (tmux 3.2+)
-set -g allow-passthrough on   # let nvim's IS_NVIM user var (OSC 1337) reach wezterm for smart-splits detection
 set -g history-limit 100000
 set -g buffer-limit 20
 set -sg escape-time 0
