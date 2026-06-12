@@ -21,7 +21,6 @@ MAPPINGS=(
   "file|$HOME/.zprofile|zsh/.zprofile"
   "file|$HOME/.bashrc|bash/.bashrc"
   "file|$HOME/.gitconfig|git/.gitconfig"
-  "dir|$HOME/.config/karabiner|karabiner"
 )
 
 # Parse a mapping entry into globals: M_TYPE, M_SRC, M_DEST (absolute).
