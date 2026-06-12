@@ -6,8 +6,7 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
 
--- Skip confirmation prompt when closing wezterm if all running processes
-config.skip_close_confirmation_for_processes_named = { "bash", "zsh", "tmux" }
+-- Never prompt when closing wezterm
 config.window_close_confirmation = "NeverPrompt"
 
 -- my coolnight colorscheme
@@ -32,14 +31,14 @@ local jetbrains = function(weight, italic)
 end
 
 config.font = jetbrains("Medium", false)
-config.font_size = 19
+config.font_size = 21
 
 config.font_rules = {
 	{ intensity = "Bold", italic = false, font = jetbrains("Bold", false) },
-	{ intensity = "Normal", italic = true, font = jetbrains("Medium", false) },
-	{ intensity = "Bold", italic = true, font = jetbrains("Bold", false) },
+	{ intensity = "Normal", italic = true, font = jetbrains("Medium", true) },
+	{ intensity = "Bold", italic = true, font = jetbrains("Bold", true) },
 	{ intensity = "Half", italic = false, font = jetbrains("Light", false) },
-	{ intensity = "Half", italic = true, font = jetbrains("Light", false) },
+	{ intensity = "Half", italic = true, font = jetbrains("Light", true) },
 }
 
 config.harfbuzz_features = {
@@ -49,7 +48,6 @@ config.harfbuzz_features = {
 	"ss01=1",
 	"ss02=1",
 	"zero=1",
-	"cv99=1",
 }
 
 config.line_height = 1.0
@@ -57,13 +55,13 @@ config.cell_width = 1.0
 
 config.front_end = "WebGpu"
 config.webgpu_power_preference = "HighPerformance"
+config.max_fps = 120
 config.custom_block_glyphs = true
 config.allow_square_glyphs_to_overflow_width = "Always"
 config.bold_brightens_ansi_colors = "BrightAndBold"
 config.warn_about_missing_glyphs = false
 
 config.default_cursor_style = "SteadyBlock"
-config.cursor_blink_rate = 0
 
 config.scrollback_lines = 10000
 
@@ -85,7 +83,7 @@ config.window_decorations = "RESIZE"
 
 local mux = wezterm.mux
 wezterm.on("gui-startup", function(cmd)
-	local tab, pane, window = mux.spawn_window(cmd or {})
+	local _, _, window = mux.spawn_window(cmd or {})
 	window:gui_window():maximize()
 end)
 
