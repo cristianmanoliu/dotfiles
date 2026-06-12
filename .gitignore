@@ -1,0 +1,15 @@
+# Secrets must never be committed (zshrc sources this externally)
+.secrets.zsh
+
+# tmux-resurrect runtime session state (always dirty)
+tmux/plugins/tmux-resurrect/last
+tmux/plugins/tmux-resurrect/resurrect/
+
+# editor / backup junk
+*.swp
+*.bak
+*.bak2
+*.orig
+
+# install.sh leftovers
+*.bak-*
